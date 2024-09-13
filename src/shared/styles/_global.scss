@@ -1,0 +1,25 @@
+body {
+    background-color: var(--dark03);
+    color: var(--white);
+    font-family: "Manrope", system-ui;
+}
+
+button {
+    padding: 0 24px;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-weight: 500;
+    border-radius: var(--buttonRadius);
+    background-color: var(--buttonColor);
+    height: var(--buttonHeight);
+
+    @include fluid-text(18, 14);
+}
+
+a {
+    color: var(--gray70);
+    text-decoration: none;
+
+    @include fluid-text(18, 14);
+}

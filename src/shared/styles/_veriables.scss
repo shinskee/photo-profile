@@ -1,0 +1,48 @@
+:root {
+    --paddingX: 16px;
+    --containerWidth: 1596px;
+    //Button
+
+    --buttonHeight: 60px;
+
+    --buttonRadius: 10px;
+    --buttonColor: #1C1C21;
+
+    @include tablet {
+        --buttonHeight: 50px;
+    }
+
+    //colors
+
+    --white: white;
+    --black: black;
+
+    --purple55: #4A2CED;
+    --purple60: #5E43EF;
+    --purple70: #8672F3;
+    --purple80: #AEA1F7;
+    --purple90: #D6D0FB;
+    --purple95: #EAE7FD;
+    --purple97: #F3F1FE;
+    --purple99: #FBFAFF;
+
+    --dark03: #070708;
+    --dark06: #0E0E10;
+    --dark08: #131316;
+    --dark12: #1C1C21;
+    --dark15: #232329;
+    --dark20: #2F2F37;
+    --dark25: #3B3B45;
+    --dark30: #474752;
+
+    --gray40: #62646C;
+    --dgray50: #797C86;
+    --gray70: #AFB0B6;
+    --gray80: #CACACE;
+    --gray90: #E4E4E6;
+    --gray95: #F2F2F3;
+    --gray97: #F7F7F8;
+    --gray99: #FCFCFD;
+}
+
+//Typography

@@ -1,0 +1,33 @@
+@import './../../../shared/styles/media.scss';
+
+.navMenu {
+    display: flex;
+    align-self:flex-end;
+}
+
+.navLink {
+    transition: background-color 0.2s;
+    padding: 30px 40px;
+    border: 1px solid var(--dark12);
+
+    &:first-child {
+        border-radius: 10px 0 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 10px 0 0;
+    }
+
+    @include hover {
+        background-color: var(--dark06);
+    }
+}
+
+.active {
+    transition: background-color 0.2s;
+    background-color: var(--dark12);
+
+    @include hover {
+        background-color: var(--dark12);
+    }
+}
