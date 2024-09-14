@@ -1,16 +1,13 @@
 :root {
     --paddingX: 16px;
     --containerWidth: 1596px;
+
     //Button
 
     --buttonHeight: 60px;
 
     --buttonRadius: 10px;
     --buttonColor: #1C1C21;
-
-    @include tablet {
-        --buttonHeight: 50px;
-    }
 
     //colors
 
@@ -43,6 +40,13 @@
     --gray95: #F2F2F3;
     --gray97: #F7F7F8;
     --gray99: #FCFCFD;
+
+    @include desktop-above {
+        --containerWidth: 1280px;
+    }
+    @include tablet {
+        --buttonHeight: 50px;
+    }
 }
 
 //Typography

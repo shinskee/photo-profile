@@ -1,0 +1,19 @@
+@import './../../styles/media';
+@import './../../styles/mixins';
+
+.h1 {
+    @include tablet {
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: var(--gray40);
+        margin-bottom: 10px;
+        
+        @include fluid-text(22, 14);
+    }
+
+    h1 {
+        @include fluid-text(80, 40);
+    }
+}

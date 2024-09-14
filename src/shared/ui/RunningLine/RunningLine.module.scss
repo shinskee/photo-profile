@@ -1,0 +1,13 @@
+@import './../../../shared/styles/media';
+@import './../../../shared/styles/mixins';
+
+.runningLine {
+    background: url('./../../image/running-line.svg'), var(--dark06);
+    background-repeat: repeat-x;
+    background-position: center;
+    height: 80px;
+
+    @include tablet {
+        height: 62px;
+    }
+}

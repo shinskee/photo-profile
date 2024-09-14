@@ -24,17 +24,24 @@ const navMenuData = [
     },
 ]
 
-function NavMenu() {
+function NavMenu({ isActiveBurger, onClickBurger, onClickNavLink }) {
     return ( 
-        <nav className={styles.navMenu}>
-            {navMenuData.map((i) => (
-                <NavLink className={({ isActive }) => [
-                    isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-                ]} to={i.path} key={i.id}>
-                    {i.title}
-                </NavLink>
-            ))}
-        </nav>
+        <div className={styles.navMenu}>
+            <button onClick={onClickBurger} className={!isActiveBurger ? `${styles.burger} visible-mobile` : `${styles.burger} ${styles.activeBurger} visible-mobile`}>
+                <span></span>
+            </button>
+            <div className={!isActiveBurger ? `${styles.navMenuDesktop} hidden-mobile` : `${styles.navMenuMobile} visible-mobile`}>
+                <nav className={``}>
+                    {navMenuData.map((i) => (
+                        <NavLink onClick={onClickNavLink} className={({ isActive }) => [
+                            isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+                        ]} to={i.path} key={i.id}>
+                            {i.title}
+                        </NavLink>
+                    ))}
+                </nav>
+            </div>
+        </div>
      );
 }
 

@@ -1,8 +1,8 @@
-@import './../../../shared/styles/media.scss';
+@import './../../../shared/styles/media';
+@import './../../../shared/styles/mixins';
 
 .navMenu {
-    display: flex;
-    align-self:flex-end;
+    align-self: flex-end;
 }
 
 .navLink {
@@ -21,6 +21,10 @@
     @include hover {
         background-color: var(--dark06);
     }
+
+    @include tablet {
+        padding: 24px 34px;
+    }
 }
 
 .active {
@@ -29,5 +33,88 @@
 
     @include hover {
         background-color: var(--dark12);
+    }
+}
+
+.navMenuDesktop {
+    nav {
+        display: flex;
+    }
+}
+
+.navMenuMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    // background-color: #fff;
+
+    nav {
+        height: 100%;
+        padding-top: 107px;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+    }
+}
+
+.burger {
+    @include reset-button;
+
+    border: 1px solid var(--dark12);
+    width: 68px;
+    height: 68px;
+    border-radius: 20px 0 0 0;
+    z-index: 10;
+    position: relative;
+
+    span {
+        position: relative;
+        display: block;
+        width: 40%;
+        height: 2px;
+        background-color: var(--white);
+        margin: 0 auto;
+        border-radius: 2px;
+
+        &::after,
+        &::before {
+            transition: all 0.2s;
+            position: absolute;
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: var(--white);
+            border-radius: 2px;
+        }
+
+        &::after {
+            top: 7px;
+            width: 50%;
+            right: 0;
+        }
+
+        &::before {
+            bottom: 7px;
+            width: 100%;
+        }
+    }
+}
+
+.activeBurger {
+    span {
+        background-color: transparent;
+
+        &::after {
+            top: 0px;
+            width: 100%;
+            rotate: 45deg;
+        }
+
+        &::before {
+            bottom: 0px;
+            rotate: -45deg;
+        }
     }
 }

@@ -1,0 +1,35 @@
+@import './../../styles/media';
+@import './../../styles/mixins';
+
+.buttonArrow {
+    @include fluid-text(50, 28);
+
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include tablet {
+        row-gap: 4px;
+    }
+
+    .top {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+    }
+
+    button {
+        @include reset-button;
+
+        padding: 18px 50px;
+        border-radius: 100px;
+        background-color: var(--purple55);
+        box-shadow: 4px 4px 17.399999618530273px rgba(255, 255, 255, 0.28) inset;
+
+        @include tablet {
+            padding: 14px 40px;
+        }
+    }
+}
