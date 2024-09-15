@@ -19,3 +19,24 @@
         display: none !important;
     }
 }
+
+.mb {
+    margin-bottom: 200px;
+
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    @include tablet {
+        margin-bottom: 80px;
+    }
+}
+
+.section {
+    padding-bottom: var(--sectionPaddingY);
+    padding-top: var(--sectionPaddingY);
+}
+
+.section-bottom {
+    padding-bottom: var(--sectionPaddingY);
+}

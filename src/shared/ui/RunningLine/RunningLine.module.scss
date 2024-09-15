@@ -1,13 +1,80 @@
 @import './../../../shared/styles/media';
 @import './../../../shared/styles/mixins';
 
-.runningLine {
+.runningLineWrapper {
+    height: 62px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--dark06);
+}
+
+.runningLine1,
+.runningLine2,
+.runningLine3,
+.runningLine4,
+.runningLine5,
+.runningLine6,
+.runningLine7,
+.runningLine8 {
     background: url('./../../image/running-line.svg'), var(--dark06);
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     background-position: center;
-    height: 80px;
+    left: max(calc(250px * 8), 100%);
+    width: 300px;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    animation-name: running;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 
     @include tablet {
         height: 62px;
+    }
+}
+
+.runningLine1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.runningLine2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.runningLine3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.runningLine4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.runningLine5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.runningLine6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.runningLine7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.runningLine8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+@keyframes running {
+    to {
+        left: -300px;
+    }
+}
+
+@keyframes running2 {
+    to {
+        left: 0;
     }
 }

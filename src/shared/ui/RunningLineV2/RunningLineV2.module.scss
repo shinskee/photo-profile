@@ -1,0 +1,63 @@
+@import './../../../shared/styles/media';
+@import './../../../shared/styles/mixins';
+
+.runningLineWrapper {
+    height: 62px;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--dark06);
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+
+.runningLineSlider {
+    align-items: center;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    position: relative;
+    min-width: calc(var(--width) * var(--quantity));
+
+    @include hover {
+        .runningLine {
+            animation-play-state: paused;
+        }
+    }
+}
+
+.runningLine {
+    position: absolute;
+    width: var(--width);
+    // left: 100%;
+    transform: translateX(100vw);
+    animation: autorun2 var(--time) linear infinite;
+    animation-delay: calc( (var(--time) / var(--quantity)) * (var(--position) - 10) );
+    // height: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+@keyframes autorun {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc(var(--width) * -1);
+    }    
+}
+
+@keyframes autorun2 {
+    from {
+        transform: translateX(calc(var(--width) * var(--quantity)));
+    }
+    to {
+        transform: translateX(calc(var(--width) * -1));
+    }    
+}

@@ -17,3 +17,69 @@
         @include fluid-text(80, 40);
     }
 }
+
+.h2 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin-bottom: 80px;
+    border-bottom: 1px solid var(--dark12);
+    column-gap: 30px;
+    align-items: center;
+
+    @include desktop {
+        padding-bottom: 40px;
+        margin-bottom: 60px;
+    }
+
+    @include tablet {
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        align-items: start;
+        padding-bottom: 20px;
+        row-gap: 20px;
+    }
+
+    p {
+        color: var(--gray40);
+        margin-bottom: 10px;
+        
+        @include fluid-text(20, 14);
+        @include tablet {
+            margin-bottom: 5px;
+        }
+    }
+
+    h2 {
+        @include fluid-text(58, 28);
+
+        text-transform: uppercase;
+    }
+}
+
+.sliderButtons {
+    display: flex;
+    column-gap: 12px;
+    padding: 8px;
+    border: var(--borderLine);
+    border-radius: 100px;
+
+     button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        font-size: 30px;
+
+        @include tablet {
+            width: 48px;
+            height: 48px;
+        }
+     }
+}

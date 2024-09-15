@@ -1,0 +1,51 @@
+@import './../../../shared/styles/media.scss';
+@import './../../../shared/styles/mixins.scss';
+
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
+    .accordion {
+        padding: 30px 50px;
+        border: var(--borderLine);
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        @include tablet {
+            padding: 24px 40px;
+        }
+
+        .question {
+            @include fluid-text(20, 16);
+
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray70);
+            font-weight: 500;
+            column-gap: 10px;
+
+            button {
+                @include center;
+
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                border: var(--borderLine);
+                background-color: transparent;
+            }
+        }
+
+        .ask {
+            @include fluid-text(18, 14);
+
+            color: var(--gray50);
+            font-weight: 400;
+        }
+    }
+}

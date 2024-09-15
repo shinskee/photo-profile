@@ -1,0 +1,52 @@
+@import './../../styles/media';
+@import './../../styles/mixins';
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+
+    @include desktop {
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: start;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        row-gap: 20px;
+    }
+
+    .icons {
+        border: var(--borderLine);
+        background-color: var(--dark03);
+        padding: 10px;
+        border-radius: 100px;
+        display: flex;
+        column-gap: 16px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--dark12);
+        }
+    }
+
+    .buttons {
+        display: flex;
+        column-gap: 20px;    
+    }
+}

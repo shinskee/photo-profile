@@ -48,6 +48,7 @@
     left: 0;
     bottom: 0;
     right: 0;
+    z-index: 20;
     // background-color: #fff;
 
     nav {
@@ -66,7 +67,7 @@
     width: 68px;
     height: 68px;
     border-radius: 20px 0 0 0;
-    z-index: 10;
+    z-index: 30;
     position: relative;
 
     span {

@@ -1,6 +1,11 @@
 :root {
     --paddingX: 16px;
-    --containerWidth: 1596px;
+    --containerWidth: 1500px;
+    --sectionPaddingY: 100px;
+
+    //Border
+
+    --borderLine: 1px solid var(--dark12);
 
     //Button
 
@@ -33,7 +38,7 @@
     --dark30: #474752;
 
     --gray40: #62646C;
-    --dgray50: #797C86;
+    --gray50: #797C86;
     --gray70: #AFB0B6;
     --gray80: #CACACE;
     --gray90: #E4E4E6;
@@ -41,11 +46,24 @@
     --gray97: #F7F7F8;
     --gray99: #FCFCFD;
 
-    @include desktop-above {
-        --containerWidth: 1280px;
+    //Running Line 
+
+    // --widthRL: 250px;
+    // --quantityRL: 10;
+
+    @include desktop {
+        --sectionPaddingY: 75px;
+        --containerWidth: 1200px;
     }
+
     @include tablet {
         --buttonHeight: 50px;
+        --sectionPaddingY: 40px;
+    }
+
+    @include mobile {
+        --buttonHeight: 40px;
+        --sectionPaddingY: 40px;
     }
 }
 

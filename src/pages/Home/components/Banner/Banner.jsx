@@ -7,7 +7,7 @@ function Banner() {
         <div className="border">
             <div className={`${styles.banner} container`}>
                 <Title variant={"h1"} title={"Damien Braun"} subtitle={"Stunning Photography by"} />
-                <ButtonArrow />
+                <ButtonArrow variant={"v1"} />
             </div>
         </div>
      );
