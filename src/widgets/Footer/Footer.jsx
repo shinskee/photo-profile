@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import ButtonArrow from "../../shared/ui/ButtonArrow";
 import { navMenuFooterData } from "../../shared/ui/NavMenu/NavMenu";
+import footerLogo from './../../shared/image/footer-logo-big.png'
 import styles from "./Footer.module.scss"
 import RunningLineV2 from "../../shared/ui/RunningLineV2";
 import SocialIcons from "../../shared/ui/SocialIcons/SocialIcons";
@@ -8,8 +9,8 @@ import SocialIcons from "../../shared/ui/SocialIcons/SocialIcons";
 function Footer() {
     return ( 
         <div>
-            <div>
-
+            <div className={`${styles.footerLogo} section container`}>
+                <img src={footerLogo} alt="" width={""} />
             </div>
             <RunningLineV2 />
             <div className={styles.footerWrapper}>

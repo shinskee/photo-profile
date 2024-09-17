@@ -1,0 +1,50 @@
+@import '../../../../shared/styles/media';
+@import '../../../../shared/styles/mixins';
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include tablet {
+        gap: 20px;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 24px 30px;
+        border-radius: 12px;
+        border: var(--borderLine);
+        background-color: var(--dark06);
+
+        @include desktop {
+            padding: 20px 24px;
+        }
+
+        @include tablet {
+            padding: 20px 14px;
+        }
+
+        .year,
+        .content {
+            color: var(--gray50);
+        }
+
+        .year {
+            @include fluid-text(44, 24);
+
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .content {
+            @include fluid-text(18, 14);
+
+            line-height: 1.5;
+        }
+    }
+}

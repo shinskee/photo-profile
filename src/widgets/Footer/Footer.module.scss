@@ -152,3 +152,18 @@
     }
     
 }
+
+.footerLogo {
+    display: flex;
+    justify-content: end;
+
+    img {
+        @include desktop {
+            width: 66%;
+        }
+
+        @include tablet {
+            width: 87%;
+        }
+    }
+}
