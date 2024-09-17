@@ -1,0 +1,84 @@
+@import './../../../shared/styles/media.scss';
+@import './../../../shared/styles/mixins.scss';
+
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    align-items: center;
+
+    @include desktop {
+        column-gap: 40px;
+    }
+
+    @include tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 30px;
+    }
+
+    .image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        @include tablet {
+            row-gap: 12px;
+        }
+
+        p {
+            color: var(--gray50);
+            line-height: 1.5;
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+
+        @include tablet {
+            row-gap: 30px;
+        }
+
+        .highlightsWrapper {
+            p {
+                color: var(--gray80);
+                margin-bottom: 20px;
+            }
+
+            .highlights {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+    
+                .highlight {
+                    display: flex;
+                    column-gap: 10px;
+                    align-items: center;
+                    padding: 18px 20px;
+                    border: var(--borderLine);
+                    border-radius: 12px;
+    
+                    p {
+                        color: var(--gray70);
+                        margin-bottom: 0;
+                    }
+
+                    img {
+                        @include tablet {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

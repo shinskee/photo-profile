@@ -1,0 +1,43 @@
+@import '../../../../shared/styles/media';
+@import '../../../../shared/styles/mixins';
+
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 14px;
+        row-gap: 10px;
+    }
+
+    .statistic {
+        padding: 24px 30px;
+        border-radius: 12px;
+        border: var(--borderLine);
+        background-color: var(--dark06);
+
+        @include desktop {
+            padding: 20px 24px;
+        }
+
+        @include tablet {
+            padding: 20px 14px;
+        }
+
+        .value {
+            @include fluid-text(48, 28);
+
+            color: var(--white);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .name {@include fluid-text(18, 14);
+            
+            color: var(--gray50);
+        }
+    }
+}

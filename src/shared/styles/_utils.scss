@@ -3,3 +3,52 @@
     margin-inline: auto;
     padding-inline: var(--paddingX);
 }
+
+.border {
+    border: 1px solid var(--dark12);
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.hidden-tablet {
+    @include tablet {
+        display: none !important;
+    }
+}
+
+.visible-tablet {
+    @include tablet-above {
+        display: none !important;
+    }
+}
+
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
+}
+
+.mb {
+    margin-bottom: 200px;
+
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    @include tablet {
+        margin-bottom: 80px;
+    }
+}
+
+.section {
+    padding-bottom: var(--sectionPaddingY);
+    padding-top: var(--sectionPaddingY);
+}
+
+.section-bottom {
+    padding-bottom: var(--sectionPaddingY);
+}

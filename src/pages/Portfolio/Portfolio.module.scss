@@ -1,0 +1,130 @@
+@import './../../shared/styles/mixins';
+@import './../../shared/styles/media';
+
+.portfolio {
+    .hero {
+        // position: relative;
+        // height: 700px;
+
+        .description {
+            color: var(--gray50);
+            line-height: 1.5;
+            width: 70%;
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+
+        .title {
+            // position: absolute;
+            // top: 0;
+
+            @include tablet {
+                position: relative;
+            }
+        }
+        
+         .heroImage {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            aspect-ratio: 57/28;
+            width: 100%;
+            // height: 700px;
+            // top: 0;
+            // position: absolute;
+            background-image: url('./../../shared/image/portfolio-page/hero.png');
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: left top;
+            // background-position-y: 80px;
+
+            @include tablet {
+                aspect-ratio: 399/200;
+                // height: 100%;
+                order: 1;
+                position: relative;
+                background: url('./../../shared/image/portfolio-page/hero-tablet.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: right top;
+                border-radius: 14px;
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                background-size: cover;
+                height: 189px;
+                max-height: 100%;
+                // background-size: cover;
+                margin-bottom: 20px;
+                padding: 0;
+            }
+         }
+
+         .bottomHero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                @include fluid-text(18,14);
+
+                padding-right: 20px;
+                color: var(--gray50);
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            img {
+                width: 9%;
+            }
+         }
+    }
+
+    .brandsWrapper {
+        
+        .brands {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: var(--dark06);
+            border: var(--borderLine);
+            height: 110px;
+            column-gap: 10px;
+
+            @include tablet {
+                row-gap: 10px;
+                height: 90px;
+            }
+            
+            @include mobile {
+                height: 100%;
+                flex-wrap: wrap;
+            }
+
+            .brand {
+                img {
+                    width: 100%;
+                }
+
+                @include mobile {
+                    width: 180px;
+                }
+            }
+        }
+        
+        .brandsTitle {
+            @include fluid-text(16, 14);
+
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            color: var(--gray50);
+            margin-bottom: 18px;
+        }
+    }
+}

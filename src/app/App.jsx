@@ -1,6 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Layout from "../pages/Layout/Layout"
 import Home from "../pages/Home/Home"
+import Portfolio from "../pages/Portfolio"
+import AboutMe from "../pages/AboutMe"
+import Services from "../pages/Services"
 
 function App() {
   const routes = ([{
@@ -13,7 +16,15 @@ function App() {
       },
       {
         path: '/AboutMe',
-        element: <Home />
+        element: <AboutMe />
+      },
+      {
+        path: '/Portfolio',
+        element: <Portfolio />
+      },
+      {
+        path: '/Services',
+        element: <Services />
       },
     ]
   }])

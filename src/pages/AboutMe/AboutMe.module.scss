@@ -1,0 +1,92 @@
+@import './../../shared/styles/mixins';
+@import './../../shared/styles/media';
+
+.aboutMe {
+
+    .hero {
+        position: relative;
+        height: 754px;
+
+        @include desktop {
+            height: 700px;
+        }
+
+        @include tablet {
+            height: 100%;
+        }
+
+        .heroImage {
+
+            .img1,
+            .img2,
+            .img3 {
+                top: 0;
+                position: absolute;
+            }
+
+            .img1 {
+                img {
+                    clip-path: inset(0 0 85% 49% round 34px 34px 34px 34px);
+                    width: 100%;
+
+                    @include tablet {
+                        display: none;
+                    }
+                }
+            }
+
+            .img2 {
+                @include tablet {
+                    position: relative;
+                    padding-top: 0;
+                }
+
+                img {
+                    clip-path: inset(40% 0 0 0 round 34px 34px 34px 34px);
+                    width: 100%;
+                    min-height: 754px;
+                    object-fit: contain;
+
+                    @include desktop {
+                        min-height: 700px;
+                    }
+
+                    @include tablet {
+                        min-height: 100%;
+                        clip-path: unset;
+                        border-radius: 34px;
+                    }
+                }
+            }
+        }
+    }
+
+    .biography {
+        border-bottom: var(--borderLine);
+        border-top: var(--borderLine);
+
+        .biographyContent,
+        .biographyTitle {
+            color: var(--gray50);
+        }
+
+        .biographyTitle {
+            @include fluid-text(44, 24);
+
+            margin-bottom: 40px;
+
+            @include desktop {
+                margin-bottom: 30px;
+            }
+    
+            @include tablet {
+                margin-bottom: 20px;
+            }
+    
+        }
+
+        .biographyContent {
+            @include fluid-text(20, 14);
+        }
+    }
+}
